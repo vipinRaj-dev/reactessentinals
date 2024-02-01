@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ContexApi from "./components/ContexApi";
+import CounterRedex from "./components/CounterRedex.jsx";
+import { ThemeProvider } from "./components/ThemeProvider";
+import TodoRedex from "./components/TodoRedex.jsx";
+import UseEffect from "./components/UseEffect";
+import UseState from "./components/UseState";
+
+import store from "./store.js";
+import { Provider } from "react-redux";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <UseState/>
+
+      {/* <UseEffect /> */}
+
+      {/* step 2 : wrapping the compnent with the contexapi */}
+      {/* <ThemeProvider>
+          <ContexApi  name={'vipin'} />
+      </ThemeProvider> */}
+
+      {/* <Provider store={store}> 
+      <TodoRedex/>
+      <CounterRedex/>
+      </Provider> */}
+
+
     </div>
   );
 }
